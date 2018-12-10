@@ -51,7 +51,8 @@ public class EmailController {
 		   msg.setSubject(subject);
 		   msg.setContent(text, "text/html");
 		   msg.setSentDate(new Date());
-
+		   msg.setHeader("Content-Type", "text/plain; charset=UTF-8");
+		   
 		   MimeBodyPart messageBodyPart = new MimeBodyPart();
 		   messageBodyPart.setContent("Tutorials point email", "text/html");
 
